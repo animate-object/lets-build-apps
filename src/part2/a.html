@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Part 2 -- Random Numbers
+    </title>
+    <style>
+      body {
+        text-align: center;
+        padding-top: 40vh;
+      }
+      input {
+        width: 400px;
+        border-radius: 4px;
+        font-size: 2rem;
+      }
+
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: green;
+        color: white;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showRandomNumber()">
+      Show me a random number
+    </button>
+
+    <script>
+      const showRandomNumber = () => {
+        alert(randomNumber(1, 10));
+      };
+      const randomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+    </script>
+  </body>
+</html>

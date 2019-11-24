@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Part 2 -- Random colors
+    </title>
+    <style>
+      body {
+        text-align: center;
+        padding-top: 40vh;
+      }
+      input {
+        width: 400px;
+        border-radius: 4px;
+        font-size: 2rem;
+      }
+
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: black;
+        color: white;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton" onclick="changeColors()">
+      Change colors
+    </button>
+    <p id="number"></p>
+    <script>
+      const changeColors = () => {
+        changeElementColor(document.body, randomColor());
+        changeElementColor(document.getElementById("myButton"), randomColor());
+      };
+
+      const changeElementColor = (element, newColor) => {
+        element.setAttribute("style", "background-color:" + newColor);
+      };
+
+      const randomColor = () => {
+        const r = randomNumber(1, 255);
+        const g = randomNumber(1, 255);
+        const b = randomNumber(1, 255);
+
+        return "rgba(" + r + ", " + g + ", " + b + ")";
+      };
+
+      const randomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+    </script>
+  </body>
+</html>

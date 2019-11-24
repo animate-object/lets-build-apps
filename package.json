@@ -1,0 +1,10 @@
+{
+  "name": "lets-build-apps",
+  "version": "1.0.0",
+  "description": "example apps for the lets build apps course",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}
