@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Part 2 -- Updating the document
+    </title>
+    <style>
+      body {
+        text-align: center;
+        padding-top: 40vh;
+      }
+      input {
+        width: 400px;
+        border-radius: 4px;
+        font-size: 2rem;
+      }
+
+      button {
+        border: none;
+        border-radius: 4px;
+        background-color: green;
+        color: white;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showRandomNumber()">
+      Show me a random number
+    </button>
+    <p id="number"></p>
+
+    <script>
+      const showRandomNumber = () => {
+        const myNumber = randomNumber(1, 100);
+        displayNumber(myNumber);
+      };
+      const randomNumber = (min, max) => {
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+
+      const displayNumber = number => {
+        const element = document.getElementById("number");
+        element.textContent = number;
+      };
+    </script>
+  </body>
+</html>
